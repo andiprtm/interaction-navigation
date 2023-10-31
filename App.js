@@ -1,20 +1,24 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
+import { StatusBar, View, Text, Touchable } from "react-native";
+import {
+  PressableScreen,
+  StackHookScreen,
+  StackScreen,
+  TouchableScreen,
+  StackParamScreen
+} from "./screens";
 
-export default function App() {
+const App = () => {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+    <View style={{ paddingTop: 0, flex: 1 }}>
+      <StatusBar style={{ padding: 0 }} />
+      <Text style = {{textAlign:'center',fontSize:30}}>
+        Moch. Andi Divangga Pratama 
+        (1203210005)
+      </Text>
+      <StackParamScreen/>
     </View>
   );
-}
+};
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;
